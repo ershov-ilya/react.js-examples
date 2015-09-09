@@ -8,8 +8,39 @@
 <body>
 <h1>Static header</h1>
 <div id="mount-point"></div>
+<div id="app"></div>
 <script type="text/jsx">
     /** @jsx React.DOM */
+
+    var App = React.createClass({
+        getInitialState: function() {
+            return {userInput: ''};
+        },
+        handleChange: function(e) {
+            this.setState({userInput: e.target.value});
+        },
+        clearAndFocusInput: function() {
+            // Clear the input
+            this.setState({userInput: ''}, function() {
+                // This code executes after the component is re-rendered
+                React.findDOMNode(this.refs.theInput).focus();   // Boom! Focused!
+            });
+        },
+        render: function() {
+            return (
+                    <div>
+                        <div onClick={this.clearAndFocusInput}>
+                            Click to Focus and Reset
+                        </div>
+                        <input
+                                ref="theInput"
+                                value={this.state.userInput}
+                                onChange={this.handleChange}
+                        />
+                    </div>
+            );
+        }
+    });
 
     var FilteredList = React.createClass({
         getInitialState: function(){
@@ -62,6 +93,8 @@
         }
     });
 
-    React.render(<FilteredList/>, document.getElementById('mount-point'));</script>
+    React.render(<FilteredList/>, document.getElementById('mount-point'));
+    React.render(<App/>, document.getElementById('app'));
+</script>
 </body>
 </html>
