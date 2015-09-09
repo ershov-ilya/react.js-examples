@@ -8,50 +8,6 @@
  * Time: 13:28
  */
 
-/** @jsx React.DOM */
-
-var App = React.createClass({
-    $this:null,
-    statics: {
-        get: function() {
-            return $this.state.userInput;
-        },
-        set: function(data) {
-            $this.setState({userInput: data});
-        }
-    },
-    componentWillMount: function(){
-        $this=this;
-    },
-    getInitialState: function() {
-        return {userInput: ''};
-    },
-    handleChange: function(e) {
-        this.setState({userInput: e.target.value});
-    },
-    clearAndFocusInput: function() {
-        // Clear the input
-        this.setState({userInput: ''}, function() {
-            // This code executes after the component is re-rendered
-            React.findDOMNode(this.refs.theInput).focus();   // Boom! Focused!
-        });
-    },
-    render: function() {
-        return (
-            <div>
-                <div onClick={this.clearAndFocusInput}>
-                    Click to Focus and Reset
-                </div>
-                <input
-                    ref="theInput"
-                    value={this.state.userInput}
-                    onChange={this.handleChange}
-                />
-            </div>
-        );
-    }
-});
-
 var FilteredList = React.createClass({
     getInitialState: function(){
         return {
@@ -80,6 +36,7 @@ var FilteredList = React.createClass({
         this.setState({items: updatedList});
     },
     render: function(){
+        console.log('Render event');
         return (
             <div className="filter-list">
                 <input type="text" placeholder="Search" onChange={this.filterList}/>
@@ -103,5 +60,11 @@ var List = React.createClass({
     }
 });
 
-React.render(<FilteredList/>, document.getElementById('mount-point'));
-React.render(<App/>, document.getElementById('app'));
+if(typeof FilteredList != 'undefined') {
+    React.render(
+        React.createElement(FilteredList, {}),
+        document.getElementById('mount-point')
+    );
+}
+
+// React.render(<FilteredList/>, document.getElementById('mount-point'));
