@@ -12,14 +12,6 @@
     /** @jsx React.DOM */
 
     var FilteredList = React.createClass({
-        filterList: function(event){
-            var updatedList = this.state.initialItems;
-            updatedList = updatedList.filter(function(item){
-                return item.toLowerCase().search(
-                                event.target.value.toLowerCase()) !== -1;
-            });
-            this.setState({items: updatedList});
-        },
         getInitialState: function(){
             return {
                 initialItems: [
@@ -37,6 +29,14 @@
         },
         componentWillMount: function(){
             this.setState({items: this.state.initialItems})
+        },
+        filterList: function(event){
+            var updatedList = this.state.initialItems;
+            updatedList = updatedList.filter(function(item){
+                return item.toLowerCase().search(
+                                event.target.value.toLowerCase()) !== -1;
+            });
+            this.setState({items: updatedList});
         },
         render: function(){
             return (
