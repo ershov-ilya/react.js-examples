@@ -1,0 +1,17 @@
+[
+  {
+    "title":"Header 1",
+    "description":"Full description",
+    "img":"1.jpg"
+  },
+  {
+    "title":"Header 2",
+    "description":"Full description",
+    "img":"2.jpg"
+  },
+  {
+    "title":"Header 3",
+    "description":"Full description",
+    "img":"3.jpg"
+  }
+]
