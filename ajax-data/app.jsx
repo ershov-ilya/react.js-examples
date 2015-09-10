@@ -25,32 +25,49 @@ var App = React.createClass({
     },
 
     getInitialState: function() {
-        return {userInput: 'paste here'};
+        return {
+            userInput: '',
+            items: []
+        };
     },
-    handleChange: function(e) {
-        this.setState({userInput: e.target.value});
+
+    componentDidMount: function() {
+        $.get(this.props.source, function(response) {
+            if (this.isMounted()) {
+                this.setState({
+                    items: response
+                });
+            }
+        }.bind(this));
     },
-    clearAndFocusInput: function() {
-        // Clear the input
-        this.setState({userInput: ''}, function() {
-            // This code executes after the component is re-rendered
-            React.findDOMNode(this.refs.theInput).focus();   // Boom! Focused!
-        });
+
+    LoadMore: function(){
+        $.get('second.json', function(response) {
+            if (this.isMounted()) {
+                this.setState({
+                    items: $.merge(this.state.items,response)
+                });
+            }
+        }.bind(this));
     },
+
     render: function() {
+        console.log(this.state.items);
         return (
             <div>
-                <div onClick={this.clearAndFocusInput}>
-                    Click to Focus and Reset
-                </div>
-                <input
-                    ref="theInput"
-                    value={this.state.userInput}
-                    onChange={this.handleChange}
-                />
+                <ul id="List">
+                    {
+                        this.state.items.map(function(item) {
+                            return <li>{item.title} {item.description} {item.img}</li>
+                        })
+                    }
+                </ul>
+                <button id="LoadMore" onClick={this.LoadMore}>Load More</button>
             </div>
         );
     }
 });
 
-if(typeof App != 'undefined') React.render(<App/>, document.getElementById('app'));
+// Mounting
+if(typeof App != 'undefined') React.render(<App source="first.json" />, document.getElementById('app'));
+
