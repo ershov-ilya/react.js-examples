@@ -7,3 +7,14 @@
 */
 
 @charset "UTF-8";
+
+$red: darken(red, 30%);
+
+.container{
+  background-color: yellow;
+  .col-md-4{
+    display: inline-block;
+    width:30%;
+    background-color: $red;
+  }
+}

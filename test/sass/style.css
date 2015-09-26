@@ -5,5 +5,11 @@
  * GitHub : https://github.com/ershov-ilya
  * on 26.09.2015.
 */
+.container {
+  background-color: yellow; }
+  .container .col-md-4 {
+    display: inline-block;
+    width: 30%;
+    background-color: #660000; }
 
 /*# sourceMappingURL=style.css.map */
