@@ -1,0 +1,12 @@
+# Мой конфиг
+set-alias which where.exe
+git config --system color.ui true
+git config --global alias.r "remote -v"
+git config --global alias.t "branch --set-upstream master origin/master"
+git config --global alias.s "status"
+git config --global alias.a "add -A"
+git config --global alias.p "!git push --recurse-submodules=on-demand; git push --tags"
+git config --global alias.l "log --oneline --graph --color --decorate=full"
+git config --global alias.d "diff"
+git config --global alias.u '!git pull; git submodule foreach git pull'
+git config --global alias.i '!echo .idea >> .gitignore;git init && git add -A && git commit --allow-empty -m "Initial commit"'
