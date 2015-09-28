@@ -84,5 +84,3 @@ var App = React.createClass({
 
 // Mounting
 if (typeof App != 'undefined') React.render(React.createElement(App, { source: 'first.json' }), document.getElementById('app'));
-
-//# sourceMappingURL=app-compiled.js.map
