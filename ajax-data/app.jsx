@@ -8,8 +8,6 @@
  * Time: 13:28
  */
 
-/** @jsx React.DOM */
-
 var App = React.createClass({
     $this:null,
     componentWillMount: function(){

@@ -8,8 +8,6 @@
  * Time: 13:28
  */
 
-/** @jsx React.DOM */
-
 var InputApp = React.createClass({displayName: "InputApp",
     $this:null,
     componentWillMount: function(){
