@@ -1,18 +1,45 @@
-﻿/* 1 */
+﻿/* 1 - зарезервированные имена JS */
 function
 return
 var
+break
+default
+case
+delete
+if
+switch
+void
+catch
+do
+in
+while
+const
+else
+instanceof
+throw
+with
+continue
+finally
+let
+try
+debugger
+for
+new
+typeof
 
-/* 2 */
+
+/* 2 - свойства */
 bind
 console
+log
+error
 createClass
 document
 onChange
 onSubmit
 window
 
-/* 3 */
+/* 3 - зарезервированные имена HTHML */
 b
 body
 div
@@ -23,7 +50,7 @@ p
 span
 strong
 
-/* 4 */
+/* 4 - зарезервированные имена React  */
 React
 componentDidMount
 componentWillMount
