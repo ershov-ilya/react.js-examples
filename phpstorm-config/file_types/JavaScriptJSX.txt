@@ -49,13 +49,21 @@ input
 p
 span
 strong
+section
+ul
+li
+a
 
 /* 4 - зарезервированные имена React  */
 React
 componentDidMount
 componentWillMount
 getInitialState
+initialItems
 props
 render
 state
 this
+statics
+isMounted
+setState
