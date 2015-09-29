@@ -26,6 +26,8 @@ debugger
 for
 new
 typeof
+true
+false
 
 
 /* 2 - свойства */
