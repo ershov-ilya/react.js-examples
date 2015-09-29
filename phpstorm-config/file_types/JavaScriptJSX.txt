@@ -58,8 +58,6 @@ a
 
 /* 4 - зарезервированные имена React  */
 React
-componentDidMount
-componentWillMount
 getInitialState
 initialItems
 props
@@ -69,3 +67,10 @@ this
 statics
 isMounted
 setState
+componentDidMount
+componentWillMount
+componentWillReceiveProps
+shouldComponentUpdate
+componentWillUpdate
+componentDidUpdate
+componentWillUnmount
