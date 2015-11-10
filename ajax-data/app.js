@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Created by PhpStorm.
  * Author:   ershov-ilya
@@ -8,11 +10,7 @@
  * Time: 13:28
  */
 
-'use strict';
-
 var App = React.createClass({
-    displayName: 'App',
-
     $this: null,
     componentWillMount: function componentWillMount() {
         $this = this;
