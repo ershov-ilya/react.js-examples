@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="$FileName$ -o $FileNameWithoutExtension$.min.js" />
+    <option name="checkSyntaxErrors" value="true" />
+    <option name="description" value="Compress .js files" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="js" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="UglifyJS" />
+    <option name="output" value="$FileNameWithoutExtension$.min.js" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="passParentEnvs" value="true" />
+    <option name="program" value="C:/Users/user/AppData/Roaming/npm/uglifyjs.cmd" />
+    <option name="scopeName" value="Project Files" />
+    <option name="trackOnlyRoot" value="true" />
+    <option name="workingDir" value="$FileDir$" />
+    <envs />
+  </TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="--no-cache --update $FileName$:$FileNameWithoutExtension$.css" />
+    <option name="checkSyntaxErrors" value="false" />
+    <option name="description" value="Compiles .scss files into .css files" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="scss" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="SCSS" />
+    <option name="output" value="" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="passParentEnvs" value="true" />
+    <option name="program" value="C:/Ruby22-x64/bin/scss.bat" />
+    <option name="scopeName" value="Project Files" />
+    <option name="trackOnlyRoot" value="true" />
+    <option name="workingDir" value="$FileDir$" />
+    <envs />
+  </TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="-o $FileNameWithoutExtension$.min.css $FileName$" />
+    <option name="checkSyntaxErrors" value="true" />
+    <option name="description" value="CSS minifiyng" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="css" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="CleanCSS" />
+    <option name="output" value="$FileNameWithoutExtension$.min.css" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="passParentEnvs" value="true" />
+    <option name="program" value="C:/Users/user/AppData/Roaming/npm/cleancss.cmd" />
+    <option name="scopeName" value="Project Files" />
+    <option name="trackOnlyRoot" value="false" />
+    <option name="workingDir" value="$FileDir$" />
+    <envs />
+  </TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="--out-file $FileNameWithoutExtension$.js $FileName$" />
+    <option name="checkSyntaxErrors" value="false" />
+    <option name="description" value="" />
+    <option name="exitCodeBehavior" value="ALWAYS" />
+    <option name="fileExtension" value="JSX" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="Babel" />
+    <option name="output" value="" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="passParentEnvs" value="true" />
+    <option name="program" value="C:/Users/user/AppData/Roaming/npm/babel.cmd" />
+    <option name="scopeName" value="Project Files" />
+    <option name="trackOnlyRoot" value="false" />
+    <option name="workingDir" value="$FileDir$" />
+    <envs />
+  </TaskOptions>
+  <TaskOptions>
+    <option name="arguments" value="--presets es2015,react --out-file $FileNameWithoutExtension$.js $FileName$" />
+    <option name="checkSyntaxErrors" value="false" />
+    <option name="description" value="" />
+    <option name="exitCodeBehavior" value="ERROR" />
+    <option name="fileExtension" value="JSX" />
+    <option name="immediateSync" value="true" />
+    <option name="name" value="Babel JSX" />
+    <option name="output" value="" />
+    <option name="outputFilters">
+      <array />
+    </option>
+    <option name="outputFromStdout" value="false" />
+    <option name="passParentEnvs" value="true" />
+    <option name="program" value="C:/Users/user/AppData/Roaming/npm/babel.cmd" />
+    <option name="scopeName" value="Project Files" />
+    <option name="trackOnlyRoot" value="false" />
+    <option name="workingDir" value="$FileDir$" />
+    <envs />
+  </TaskOptions>
+</TaskOptions>
+
