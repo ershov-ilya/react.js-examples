@@ -55,6 +55,8 @@ section
 ul
 li
 a
+form
+label
 
 /* 4 - зарезервированные имена React  */
 React
