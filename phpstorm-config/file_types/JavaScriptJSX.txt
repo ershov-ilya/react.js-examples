@@ -59,7 +59,12 @@ form
 label
 
 /* 4 - зарезервированные имена React  */
+class
+constructor
+extends
+super
 React
+Component
 getInitialState
 initialItems
 props
